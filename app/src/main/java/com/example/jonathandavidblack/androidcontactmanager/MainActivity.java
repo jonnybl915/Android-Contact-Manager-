@@ -1,5 +1,6 @@
 package com.example.jonathandavidblack.androidcontactmanager;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener { // add back in later: AdapterView.OnItemClickListener
 
     ArrayAdapter<Contact> contacts;
     Button addButton;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         addButton.setOnClickListener(this);
         listView.setOnItemLongClickListener(this);
-
+        //listView.setOnItemClickListener(this);
     }
 
     @Override
@@ -52,4 +53,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contacts.remove(contact);
         return true;
     }
+//    @Override
+//    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//        Contact contact = contacts.getItem(position);
+//        Intent intent = new Intent(this, ActivityTwo.class);
+//        Bundle b = new Bundle();
+//        b.putParcelable(name.getText().toString(), );
+//        startActivity(intent);
+//    }
 }
