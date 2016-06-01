@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android Contact Manager</string>
+    <string name="title_activity_specific_contact">SpecificContact</string>
+    <string name="title_activity_2">Activity2</string>
 </resources>

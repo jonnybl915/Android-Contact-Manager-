@@ -45,9 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contacts.add(contact);
         this.name.setText("");
         this.phoneNumber.setText("");
-
     }
-
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         Contact contact = contacts.getItem(position);
