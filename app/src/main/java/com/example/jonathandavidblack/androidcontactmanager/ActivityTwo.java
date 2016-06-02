@@ -1,6 +1,7 @@
 package com.example.jonathandavidblack.androidcontactmanager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -15,14 +16,12 @@ public class ActivityTwo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-//        Bundle extras = getIntent().getExtras();
-//        if (extras != null) {
-//            String value = extras.getString();
-//        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
+
         listView2 = (ListView) findViewById(R.id.listView2);
+        //Intent intent = new getIntent();
+        //String str = getIntent()
         contacts = new ArrayAdapter<Contact>(this, android.R.layout.simple_list_item_1 ); //initializing
         listView2.setAdapter(contacts);
 

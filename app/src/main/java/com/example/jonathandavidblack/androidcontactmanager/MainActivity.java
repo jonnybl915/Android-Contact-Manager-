@@ -1,6 +1,8 @@
 package com.example.jonathandavidblack.androidcontactmanager;
 
 import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener { // add back in later: AdapterView.OnItemClickListener
+import java.io.Serializable;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemLongClickListener {
 
     ArrayAdapter<Contact> contacts;
     Button addButton;
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         phoneNumber = (EditText) findViewById(R.id.phoneNumber);
         listView = (ListView) findViewById(R.id.listView);
 
-        contacts = new ArrayAdapter<Contact>(this, android.R.layout.simple_list_item_1 ); //initializing
+        contacts = new ArrayAdapter<Contact>(this, android.R.layout.simple_list_item_1); //initializing
         listView.setAdapter(contacts);
 
         addButton.setOnClickListener(this);
@@ -55,10 +59,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 //    @Override
 //    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        Contact contact = contacts.getItem(position);
 //        Intent intent = new Intent(this, ActivityTwo.class);
+//        intent.putExtra(name.getText().toString() + phoneNumber.getText().toString(), contact);
+    //need to pass only Extra(String, items.getItem(position)
+//        intent.putExtra(phoneNumber.getText().toString(), true);
 //        Bundle b = new Bundle();
-//        b.putParcelable(name.getText().toString(), );
+//        b.putParcelable(name.getText().toString(), b);
 //        startActivity(intent);
 //    }
 }

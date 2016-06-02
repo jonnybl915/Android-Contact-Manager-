@@ -17,45 +17,47 @@
 
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="411dp"
+            android:layout_height="0dp"
             android:id="@+id/listView"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:id="@+id/name"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:hint="Name" />
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/name"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:hint="Name" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/linearLayout"
+            android:layout_toEndOf="@+id/linearLayout"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:hint="Phone #" />
 
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/phoneNumber"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/linearLayout"
-                android:layout_toEndOf="@+id/linearLayout"
-                android:layout_gravity="bottom"
-                android:layout_weight="1"
-                android:hint="Phone #" />
-
-            <Button
-                android:layout_width="52dp"
-                android:layout_height="wrap_content"
-                android:text="Add"
-                android:id="@+id/add" />
-        </LinearLayout>
-
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:id="@+id/add"
+            android:typeface="normal" />
     </LinearLayout>
 
 </RelativeLayout>

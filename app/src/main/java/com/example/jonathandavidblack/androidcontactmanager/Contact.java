@@ -1,9 +1,11 @@
 package com.example.jonathandavidblack.androidcontactmanager;
 
+import java.io.Serializable;
+
 /**
  * Created by jonathandavidblack on 6/1/16.
  */
-public class Contact {
+public class Contact implements Serializable {
     String name;
     String phoneNumber;
 
